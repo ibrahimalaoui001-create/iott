@@ -1,0 +1,16 @@
+# Environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+
+# Django
+*.log
+db.sqlite3
+media/
