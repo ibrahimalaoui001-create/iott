@@ -15,7 +15,7 @@
         body {
             padding-top: 3cm;
             font-family: 'Arial', sans-serif;
-            background-image: url('static/images/hp2.jpg');
+            background-image: url('static/images/back.jpg');
             backdrop-filter: blur(3px);
             display: flex; /* Center the content */
             justify-content: center;
@@ -48,9 +48,9 @@
     </div>
 
     <script>
-        const dates = [{% for i in tab %}'{{ i.dt }}'{% if not forloop.last %}, {% endif %}{% endfor %}];
-        const datas = [{% for i in tab %}{{ i.hum }}{% if not forloop.last %}, {% endif %}{% endfor %}];
-
+        const dates = ['{% for i in tab %}' ,'{{i.dt}}', '{% endfor %}'];
+        const datas = ['{% for i in tab %}', '{{i.hum}}',' {% endfor %}'];
+        
         var ctx = document.getElementById('myAreaChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
